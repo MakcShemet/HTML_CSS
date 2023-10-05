@@ -1,0 +1,29 @@
+﻿nav ul li {
+    display: inline-block;
+    margin: 0 0.5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.catalog {
+    max-width: 1200px;
+    margin: auto; 
+    text-align: center;  
+}
+
+.product {
+    display: inline-block;
+    text-align: justify;
+    max-width: 250px;
+    padding: 0 2%;
+}
+
+.product h3 {
+    text-align: center;
+}
+
+.product img {
+    padding: 1%;
+}
