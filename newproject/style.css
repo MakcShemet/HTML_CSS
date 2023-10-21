@@ -9,8 +9,10 @@ body {
     background-color: #020A18;
     font-family: Open Sans;
 }
+
+/* Header */
 .header {
-    margin-bottom: 160px;
+    background-color: #09111e;
 }
 .container {
     margin: 0 auto;
@@ -32,8 +34,13 @@ body {
     display: flex;
     justify-content: center;
 }
+
+/* Section Top-content */
 .top-content {
-    margin-bottom: 200px;
+    padding: 160px 0 197px;
+    background-color: #09111e;
+
+backdrop-filter: blur(100px);
 }
 .main-left {
     width: 50%;
@@ -46,7 +53,7 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
-    line-height: 160%; /* 28.8px */
+    line-height: 160%;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
@@ -92,10 +99,16 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+/* Section Logos */
 .logos {
-    margin-bottom: 99px;
+    padding-bottom: 99px;
+    background-color: #09111e;
 }
+
+/* Section About */
 .about {
+    margin-top: 157px;
     margin-bottom: 264px;
 }
 .about-left {
@@ -115,7 +128,7 @@ body {
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 130%; /* 52px */
+    line-height: 130%;
     margin-bottom: 30px;
 }
 .text-about, .text-review {
@@ -124,12 +137,20 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 160%; /* 25.6px */
+    line-height: 160%;
     margin-bottom: 50px;
     opacity: 0.7;
 }
+
+/* Section services */
 .services {
     margin-bottom: 243px;
+}
+.grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 362px);
+    justify-content: center;
 }
 .service {
     border-radius: 10px;
@@ -138,8 +159,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    width: 362px;
-    margin-bottom: 30px;
 }
 .service-img {
     margin-bottom: 30px;
@@ -152,7 +171,7 @@ body {
     font-size: 25px;
     font-style: normal;
     font-weight: 700;
-    line-height: 125%; /* 31.25px */
+    line-height: 125%;
     margin-bottom: 30px;
     opacity: 0.7;
 }
@@ -163,14 +182,16 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 160%; /* 25.6px */
+    line-height: 160%;
     opacity: 0.7;
 }
 .big {
     width: 754px;
     height: 808px;
     float: left;
-    margin-right: 30px;   
+    margin-right: 30px; 
+    grid-column: span 2;
+    grid-row: span 2;  
 }
 .big .service-img {
     margin-bottom: 60px;
@@ -178,6 +199,8 @@ body {
 .big .title-4 {
     margin-bottom: 60px;
 }
+
+/* Section reviews */
 .reviews {
     margin-bottom: 221px;
 }
@@ -195,6 +218,8 @@ body {
     margin-bottom: 0;
     width: 88%;
 }
+
+/* Footer */
 .footer {
     background-color: #070f1d;
     padding: 48px 0;    
