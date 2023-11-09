@@ -1,5 +1,5 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700&subset=cyrillic');
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,600,700,800&subset=cyrillic');
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,6 @@ body {
 }
 .container {
     margin: 0 auto;
-    width: 1147px;
 }
 .menu_link {
     text-decoration: none;
@@ -34,13 +33,24 @@ body {
     display: flex;
     justify-content: center;
 }
+.center {
+    padding-left: calc(50% - 573px);
+    padding-right: calc(50% - 573px);
+}
 
 /* Section Top-content */
 .top-content {
-    padding: 160px 0 197px;
+    padding: 160px 0 197px 0;
     background-color: #09111e;
-
-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+}
+.top-content .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 128px;
 }
 .main-left {
     width: 50%;
@@ -97,7 +107,8 @@ backdrop-filter: blur(100px);
 }
 .flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 /* Section Logos */
@@ -105,17 +116,29 @@ backdrop-filter: blur(100px);
     padding-bottom: 99px;
     background-color: #09111e;
 }
+.logos .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 71px;
+}
 
 /* Section About */
 .about {
     margin-top: 157px;
     margin-bottom: 264px;
 }
+.about .container {
+    display: flex;
+    justify-content: center;
+    gap: 68px;
+}
 .about-left {
     width: fit-content;
 }
 .about-right {
-    width: 43%;
     display: flex;
     justify-items: start;
     flex-direction: column;
@@ -158,10 +181,10 @@ backdrop-filter: blur(100px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
     padding: 30px;
 }
 .service-img {
-    margin-bottom: 30px;
     width: fit-content;
 }
 .title-4 {
@@ -172,7 +195,6 @@ backdrop-filter: blur(100px);
     font-style: normal;
     font-weight: 700;
     line-height: 125%;
-    margin-bottom: 30px;
     opacity: 0.7;
 }
 .dsc-service {
@@ -186,18 +208,9 @@ backdrop-filter: blur(100px);
     opacity: 0.7;
 }
 .big {
-    width: 754px;
-    height: 808px;
-    float: left;
-    margin-right: 30px; 
     grid-column: span 2;
     grid-row: span 2;  
-}
-.big .service-img {
-    margin-bottom: 60px;
-}
-.big .title-4 {
-    margin-bottom: 60px;
+    gap: 60px;
 }
 
 /* Section reviews */
@@ -268,4 +281,43 @@ backdrop-filter: blur(100px);
 }
 .social-link {
     color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .center {
+       padding-left: calc(50% - 376px);
+       padding-right: calc(50% - 376px);
+    } 
+    .title {
+        font-size: 48px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .logos {
+        padding-bottom: 120px;
+    }
+    .logos .container {
+        gap: 32px;
+        max-width: 650px;
+        margin: auto;
+    }
+    .about .container {
+        flex-wrap: wrap;        
+    }
+    .about-right {
+        max-width: 500px;
+    }
+    .grid {
+        grid-template-columns: repeat(1, 362px);
+        gap: 32px;
+    }
+    .big {
+        grid-column: 1;
+        grid-row: 1;
+        gap: 30px;
+    }
+    .big img {
+        width: 98px;
+    }
 }
